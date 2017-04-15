@@ -9,11 +9,10 @@ body {
   background-color: rgba(0,0,0,0.5);
   color: #EFF0EB;
   text-align: center;
-  height: 100%;
   width: 100%;
-  min-height: 100vh;
+  height: calc(100vh - 50px);
   padding-top: 50px;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 }
 
 h2 {
@@ -53,7 +52,10 @@ h2 {
   margin-bottom: 40px;
 }
 .box h4 {
-  margin-bottom: 0px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  font-weight: 400;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
