@@ -52,6 +52,8 @@ h2 {
   border: 0px solid #EFF0EB;
   border-radius: 5px;
   margin-bottom: 40px;
+  min-height: 256px;
+  overflow: hidden;
 }
 .box h4 {
   margin-bottom: 5px;
@@ -70,9 +72,12 @@ h2 {
   padding-bottom: 3px;
   transition: all 250ms;
 }
-.box a:last-child {
+/*.box a:nth-child(6) {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}*/
+.box a:hover {
+  background: #00000011;
 }
 
 .box.recreation {
@@ -82,7 +87,6 @@ h2 {
   background-color: #F3F94D;
 }
 .box.recreation a:hover {
-  background: #00000011;
   color: #F3F94D;
 }
 
@@ -93,7 +97,7 @@ h2 {
   background-color: #ff953d;
 }
 .box.subreddits a:hover {
-  background-color: #ff953d;
+  color: #ff953d;
 }
 
 .box.tech {
@@ -103,7 +107,7 @@ h2 {
   background-color: #FF6AC1;
 }
 .box.tech a:hover {
-  background-color: #FF6AC1;
+  color: #FF6AC1;
 }
 
 .box.news {
@@ -113,7 +117,7 @@ h2 {
   background-color: #5AF78E;
 }
 .box.news a:hover {
-  background-color: #5AF78E;
+  color: #5AF78E;
 }
 
 .box.work {
@@ -123,7 +127,7 @@ h2 {
   background-color: #57C7FF;
 }
 .box.work a:hover {
-  background-color: #57C7FF;
+  color: #57C7FF;
 }
 
 .box.misc {
@@ -133,5 +137,5 @@ h2 {
   background-color: #FF5C57;
 }
 .box.misc a:hover {
-  background-color: #FF5C57;
+  color: #FF5C57;
 }
