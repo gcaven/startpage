@@ -27,6 +27,9 @@ function getAmPm(i) {
   }
 }
 
+var bg_num = Math.floor(Math.random() * 30) + 1;
+var bg_string = "url(images/bgs/bg" + bg_num + ".jpg)";
+document.documentElement.style.backgroundImage = bg_string;
 
 var d = new Date();
 

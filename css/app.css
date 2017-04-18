@@ -1,6 +1,6 @@
 html {
   background-color: #20232C;
-  background-image: url("https://source.unsplash.com/random/1440x900");
+  /*background-image: url(../images/bgs/bg1.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -68,7 +68,7 @@ h2 {
   font-size: 18px;
   padding-top: 3px;
   padding-bottom: 3px;
-  transition: background-color 250ms;
+  transition: all 250ms;
 }
 .box a:last-child {
   border-bottom-left-radius: 5px;
@@ -82,7 +82,8 @@ h2 {
   background-color: #F3F94D;
 }
 .box.recreation a:hover {
-  background-color: #F3F94D;
+  background: #00000011;
+  color: #F3F94D;
 }
 
 .box.subreddits {
