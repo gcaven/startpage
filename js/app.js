@@ -52,8 +52,13 @@ document.getElementById("current-date").innerHTML = date_string;
 document.getElementById('google-input').onkeydown = function(event) {
     if (event.keyCode == 13) {
       var query = this.value;
-      query = query.replace(/\s+/g, "+");
-      query = "https://www.google.ca/#q=" + query;
-      window.location.href = query;
+      var matches = query.match(/[\w\-_]+(?:(?:\.|\s*\\s*[A-Z\-_]+)+)([A-Z\-\.,@?^=%&amp;:/~\+#]*[A-Z\-\@?^=%&amp;/~\+#]){2,3}?/i);
+      if (matches != null) {
+        window.location.href = "http://" + matches[0];
+      } else {
+        query = query.replace(/\s+/g, "+");
+        query = "https://www.google.ca/#q=" + query;
+        window.location.href = query;
+      }
     }
 }
