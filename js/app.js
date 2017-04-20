@@ -16,6 +16,9 @@ function convertTo12(i) {
   if (i > 12) {
     i = i-12;
   }
+  if (i == 0) {
+    i = 12;
+  }
   return i;
 }
 
@@ -53,7 +56,7 @@ document.getElementById('google-input').onkeydown = function(event) {
     if (event.keyCode == 13) {
       var query = this.value;
       var matches = query.match(/[\w\-_]+(?:(?:\.|\s*\\s*[A-Z\-_]+)+)([A-Z\-\.,@?^=%&amp;:/~\+#]*[A-Z\-\@?^=%&amp;/~\+#]){2,3}?/i);
-      if (matches != null) {
+      if (matches != null && matches[0].length == query.length) {
         window.location.href = "http://" + matches[0];
       } else {
         query = query.replace(/\s+/g, "+");
