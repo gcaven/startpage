@@ -23,7 +23,7 @@ function convertTo12(i) {
 }
 
 function getAmPm(i) {
-  if (i > 12) {
+  if (i > 11) {
     return "PM";
   } else {
     return "AM";
