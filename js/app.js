@@ -30,7 +30,7 @@ function getAmPm(i) {
   }
 }
 
-var bg_num = Math.floor(Math.random() * 30) + 1;
+var bg_num = Math.floor(Math.random() * 40) + 1;
 var bg_string = "url(images/bgs/bg" + bg_num + ".jpg)";
 document.documentElement.style.backgroundImage = bg_string;
 
@@ -49,19 +49,3 @@ var curr_year = d.getFullYear();
 var date_string = d_names[curr_day] + " " + curr_date + " " + m_names[curr_month] + ", " + curr_year;
 
 document.getElementById("current-date").innerHTML = date_string;
-
-// GOOGLE SEARCH FUNCTIONALITY
-
-document.getElementById('google-input').onkeydown = function(event) {
-    if (event.keyCode == 13) {
-      var query = this.value;
-      var matches = query.match(/[\w\-_]+(?:(?:\.|\s*\\s*[A-Z\-_]+)+)([A-Z\-\.,@?^=%&amp;:/~\+#]*[A-Z\-\@?^=%&amp;/~\+#]){2,3}?/i);
-      if (matches != null && matches[0].length == query.length) {
-        window.location.href = "http://" + matches[0];
-      } else {
-        query = query.replace(/\s+/g, "+");
-        query = "https://www.google.ca/#q=" + query;
-        window.location.href = query;
-      }
-    }
-}
